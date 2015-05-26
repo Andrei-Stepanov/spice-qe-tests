@@ -158,7 +158,7 @@ phase_pkgs_inst() {
   PKGS=(${PKGS1[@]} ${PKGS2[@]})
 
   for p in "${PKGS[@]}"; do
-    if ! rlRun "rlCheckRpm $p"; then
+    if ! rlCheckRpm "$p"; then
       yum -y install "$p"
       rlRun "yum -y install $p"
       if (($? > 0)); then
