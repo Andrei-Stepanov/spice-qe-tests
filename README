@@ -1,0 +1,8 @@
+How to update RPM package at Beaker hub:
+
+1. remove git remote. (necesery to keep RPM package name)
+2. update src
+3. git commit
+4. make tag
+5. make bkradd
+6. make rpm
